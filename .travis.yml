@@ -1,0 +1,12 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker build -t vita_sdl2_examples .
+
+script:     
+  - docker run vita_sdl2_examples
